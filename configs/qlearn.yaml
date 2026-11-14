@@ -3,13 +3,13 @@ algo: qlearn
 env: {
   run_mode: TRAIN,
   model: qlearn,
-  nb_loop: 5000,
+  nb_loop: 10000,
   max_episode_steps: 1000,
   enable_wind: False,
   wind_power: 0.0,
   turbulence_power: 0.0,
   render_mode: RECORD,
-  trigger_video: 500,
+  trigger_video: 1000,
   mean: 210,
   mean_steps: 100,
   load: False
