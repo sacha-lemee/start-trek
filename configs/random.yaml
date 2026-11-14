@@ -1,0 +1,25 @@
+# Random baseline: evaluates a random policy over mean_steps episodes
+algo: random
+
+env: {
+  run_mode: EVAL,
+  model: baseline,
+  nb_loop: 100,
+  max_episode_steps: 1000,
+  enable_wind: False,
+  wind_power: 0.0,
+  turbulence_power: 0.0,
+  render_mode: RECORD,
+  trigger_video: 10,
+  mean_steps: 100
+}
+
+hyper: {
+  epsilon_start: 0.0,
+  epsilon_end: 0.0,
+  epsilon_decay: 0.0,
+  discount: 0.0,
+  lr: 0.0
+}
+
+seed: 67

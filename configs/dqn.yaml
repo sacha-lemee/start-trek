@@ -1,0 +1,30 @@
+algo: dqn
+
+env: {
+  run_mode: TRAIN,
+  model: dqn,
+  nb_loop: 1000,
+  max_episode_steps: 1000,
+  enable_wind: False,
+  wind_power: 0.0,
+  turbulence_power: 0.0,
+  render_mode: RECORD,
+  trigger_video: 100,
+  mean: 210,
+  mean_steps: 100,
+  load: False
+}
+
+# Values from the report (section 2.3 and ablation study)
+hyper: {
+  epsilon_start: 1.0,
+  epsilon_end: 0.05,
+  epsilon_decay: 0.995,
+  discount: 0.99,
+  lr: 0.0001,
+  batchsize: 64,
+  memory_capacity: 50000,
+  target_update: 1000
+}
+
+seed: 67

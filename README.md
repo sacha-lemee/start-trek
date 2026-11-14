@@ -51,6 +51,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+*Box2D is built from source by pip: if the install fails, install `swig` and a C/C++ compiler first (`sudo apt install swig build-essential`).*
+
 4. **Run an experiment:**
 
 Each run is described by a YAML file (algorithm, training or evaluation mode, hyperparameters). A commented example is provided in [`doc/example.yaml`](doc/example.yaml):
@@ -65,7 +67,13 @@ Results (CSV, videos) are written to `data_<algo>/`. To plot a run:
 ./review.py data_dqn
 ```
 
-`reproduce.sh` chains the full experiment (Q-Learning, DQN, random baseline). It expects `configs/qlearn.yaml`, `configs/dqn.yaml` and `configs/random.yaml`, which you can create from `doc/example.yaml`.
+5. **Reproduce the full experiment:**
+
+```sh
+./reproduce.sh
+```
+
+It trains Q-Learning (`configs/qlearn.yaml`) and DQN (`configs/dqn.yaml`), evaluates a random baseline (`configs/random.yaml`) and generates the plots with `review.py`. The DQN hyperparameters are the ones described in the report.
 
 ## Documentation
 

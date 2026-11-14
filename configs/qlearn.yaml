@@ -1,0 +1,30 @@
+algo: qlearn
+
+env: {
+  run_mode: TRAIN,
+  model: qlearn,
+  nb_loop: 5000,
+  max_episode_steps: 1000,
+  enable_wind: False,
+  wind_power: 0.0,
+  turbulence_power: 0.0,
+  render_mode: RECORD,
+  trigger_video: 500,
+  mean: 210,
+  mean_steps: 100,
+  load: False
+}
+
+hyper: {
+  epsilon_start: 1.0,
+  epsilon_end: 0.05,
+  epsilon_decay: 0.995,
+  discount: 0.99,
+  lr: 0.1,
+  discretisation: {
+    bins: [5, 5, 20, 20, 15, 20, 2, 2],
+    zoom: 1.0
+  }
+}
+
+seed: 67
