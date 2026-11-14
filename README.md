@@ -34,7 +34,7 @@ This project requires the following dependencies:
 1. **Clone the repository:**
 
 ```sh
-git clone git@github.com:sachalemee/start-trek.git
+git clone git@github.com:sacha-lemee/start-trek.git
 ```
 
 2. **Navigate to the project directory:**
@@ -50,6 +50,22 @@ python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+4. **Run an experiment:**
+
+Each run is described by a YAML file (algorithm, training or evaluation mode, hyperparameters). A commented example is provided in [`doc/example.yaml`](doc/example.yaml):
+
+```sh
+python3 startTrek.py doc/example.yaml
+```
+
+Results (CSV, videos) are written to `data_<algo>/`. To plot a run:
+
+```sh
+./review.py data_dqn
+```
+
+`reproduce.sh` chains the full experiment (Q-Learning, DQN, random baseline). It expects `configs/qlearn.yaml`, `configs/dqn.yaml` and `configs/random.yaml`, which you can create from `doc/example.yaml`.
 
 ## Documentation
 
