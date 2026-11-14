@@ -1,4 +1,4 @@
-# START TREK (v0.1)
+# START TREK
 
 ![START TREK](doc/lunar_lander.gif)
 
@@ -18,16 +18,10 @@ Train a Lunar Lander agent using Reinforcement Learning to autonomously land saf
 
 ### Prerequisites
 
-This project requires the following dependencies:
-
-- **Programming Language:** Python
-- **Package Manager:** pip
-
-## Requirements
-
-- Python 3.x
-- **Libraries:** Gymnasium, PyTorch
-- **Physics engine:** Box2D (embedded in Gymnasium)
+This project requires:
+- Python 3.12 and pip
+- Gymnasium and PyTorch (installed from `requirements.txt`)
+- Box2D, the physics engine of the environment (built by pip, see step 3)
 
 ### Installation for Linux
 
@@ -43,7 +37,7 @@ git clone git@github.com:sacha-lemee/start-trek.git
 cd start-trek
 ```
 
-3. **install dependencies:**
+3. **Install the dependencies:**
 
 ```sh
 python3.12 -m venv .venv
@@ -77,10 +71,14 @@ It trains Q-Learning (`configs/qlearn.yaml`) and DQN (`configs/dqn.yaml`), evalu
 
 ## Documentation
 
-See the [START TREK - Report](doc/G-AIA-401_start_trek_Report.pdf)
+See the [START TREK report](doc/G-AIA-401_start_trek_Report.pdf) (in French): algorithms, results and ablation study.
+
+## Contributing
+
+Contributions are welcome: read [CONTRIBUTING.md](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT License**, see [LICENSE](LICENSE).
 
 ![START TREK License : MIT](https://img.shields.io/badge/License-MIT-blue.svg)
